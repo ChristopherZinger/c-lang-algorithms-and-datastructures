@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include "quicksort.h"
 #include "./utils/print_array.h"
 
@@ -22,16 +21,4 @@ void quicksort(int arr[],int lo, int hi) {
 
 		quicksort(arr, lo, tmp_pointer);
 		quicksort(arr, tmp_pointer + 1, hi);
-}
-
-int main () {
-		int a[] = {2, 1, 5, 6, 4, 5, 2, 1, 10, 8, 20, 40, 12, 45, 33, 4, 14, 35};
-		int size = sizeof(a) / sizeof(a[0]);
-
-		printf("print array before and after quicksort:\n");
-		printArray(a, size);
-		quicksort(a, 0, size);
-		printArray(a, size);
-
-		return 0;
 }
